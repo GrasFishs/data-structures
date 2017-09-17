@@ -17,7 +17,7 @@ class LinkedList {
         }
     }
 
-    protected Node head;
+    private Node head;
 
     public LinkedList() {
         head = new Node();
