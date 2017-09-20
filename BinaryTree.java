@@ -1,6 +1,6 @@
 import java.time.temporal.ValueRange;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
+import java.util.LinkedList;
 
 /**
  * Created by GrasFish on 2017/9/17.
@@ -99,8 +99,7 @@ public class BinaryTree {
         TreeNode node = new TreeNode(value);
         if (root == null) {
             root = node;
-        }
-        else {
+        } else {
             TreeNode p = root;
             TreeNode parent;
             while (true) {
@@ -127,6 +126,25 @@ public class BinaryTree {
         return count;
     }
 
+    void preOrderWithStack(){
+        TreeNode p = root;
+        Stack<TreeNode> stack = new Stack<>();
+        while(p!=null ||!stack.isEmpty()){
+            while (p!=null){
+                for (int i = 1; i < p.depth; i++) {
+                    System.out.print("-");
+                }
+                System.out.print(p.element);
+                System.out.println();
+                stack.push(p);
+                p = p.left;
+            }if(!stack.isEmpty()){
+                 p =stack.pop();
+                 p = p.right;
+            }
+        }
+    }
+
     void preOrder() {
         System.out.println("前序遍历：");
         preOrder(root);
@@ -143,6 +161,25 @@ public class BinaryTree {
         System.out.println("后序遍历：");
         postOrder(root);
         System.out.println();
+    }
+
+    void levelOrder() {
+        if (isEmpty()) return;
+        TreeNode treeNode;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            treeNode = queue.poll();
+            for (int i = 1; i < treeNode.depth; i++) {
+                System.out.print("-");
+            }
+            System.out.print(treeNode.element);
+            System.out.println();
+            if (treeNode.left != null)
+                queue.add(treeNode.left);
+            if (treeNode.right != null)
+                queue.add(treeNode.right);
+        }
     }
 
     private void preOrder(TreeNode treeNode) {

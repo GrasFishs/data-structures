@@ -18,9 +18,18 @@ public class ListTest {
         p3.printPolyList();
         */
 
+        /*
         ScienceCompute sc = new ScienceCompute("8*(9+6/2-4)+9");
         System.out.println(sc.getInfix()+" = "+sc.compute());
 
+        */
+
+        LinkedQueue<Integer> queue = new LinkedQueue<>();
+        for(int i =0;i<10;i++){
+            queue.enqueue(i);
+        }
+        System.out.println(queue.dequeue());
+        queue.printQueue();
         /*
         LinkedList linkedList = new LinkedList();
         for(int i =0;i<10;i++){

@@ -28,9 +28,14 @@ public class LinkedQueue<T> {
         return front == rear;
     }
 
+
     void enqueue(T e){
         rear.next = new Node(e);
         rear = rear.next;
+    }
+
+    T peak(){
+        return front.element;
     }
 
     T dequeue(){

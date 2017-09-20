@@ -24,7 +24,9 @@ public class TreeTest {
         System.out.println("节点数:"+binaryTree.size());
         System.out.println("最小"+binaryTree.findMin());
         System.out.println("最大"+binaryTree.findMax());
-        binaryTree.preOrder();
+        //binaryTree.levelOrder();
+        //binaryTree.preOrder();
+        binaryTree.preOrderWithStack();
         //binaryTree.inOrder();
         //binaryTree.postOrder();
     }
