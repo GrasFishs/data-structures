@@ -74,7 +74,6 @@ class Polynomial {
             p2 = p2.next;
         }
 
-
         return polynomial3;
     }
 

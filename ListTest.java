@@ -1,11 +1,9 @@
-import java.util.Random;
-
 /**
  * Created by GrasFish on 2017/9/16.
  */
 public class ListTest {
     public static void main(String[] args) {
-
+        /*
         Polynomial p1 = new Polynomial();
         Polynomial p2 = new Polynomial();
         Polynomial p3;
@@ -18,9 +16,10 @@ public class ListTest {
         p2.printPolyList();
         p3 = p1.plus(p2);
         p3.printPolyList();
+        */
 
-
-
+        ScienceCompute sc = new ScienceCompute("8*(9+6/2-4)+9");
+        System.out.println(sc.getInfix()+" = "+sc.compute());
 
         /*
         LinkedList linkedList = new LinkedList();

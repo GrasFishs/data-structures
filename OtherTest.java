@@ -6,18 +6,11 @@ import java.util.regex.*;
 
 public class OtherTest {
     public static void main(String[] args) {
-        LinkedStack<Integer> linkedStack = new LinkedStack<>();
-        for (int i = 0; i < 10; i++) {
-            linkedStack.push(i);
+        String string = "12.5+6.7296-0.218";
+        Pattern pattern = Pattern.compile("([\\d]*[.][\\d]*)+");
+        Matcher matcher = pattern.matcher(string);
+        while (matcher.find()){
+            System.out.println(matcher.group());
         }
-        linkedStack.pop();
-        linkedStack.printStack();
-
-        LinkedQueue<Integer> linkedQueue = new LinkedQueue<>();
-        for(int i = 0;i<10;i++){
-            linkedQueue.enqueue(i);
-        }
-        linkedQueue.dequeue();
-        linkedQueue.printQueue();
     }
 }

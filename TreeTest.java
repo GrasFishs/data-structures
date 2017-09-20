@@ -8,11 +8,17 @@ public class TreeTest {
         BinaryTree binaryTree = new BinaryTree();
         int [] nums = {7,4,2,1,3,6,5,9,8,10};
         int [] nums2 = {1,5,4,3,2,6};
+        /*
         for(int i =0;i<20;i++){
             Random  random = new Random();
             int r = random.nextInt(50);
             binaryTree.insert(r);
             System.out.print(r+" ");
+        }
+        */
+        for(int item : nums){
+            binaryTree.insert(item);
+            System.out.print(item+" ");
         }
         System.out.println();
         System.out.println("节点数:"+binaryTree.size());
