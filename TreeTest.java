@@ -1,11 +1,9 @@
-import java.util.Random;
-
 /**
  * Created by GrasFish on 2017/9/18.
  */
 public class TreeTest {
     public static void main(String[] args){
-        BinaryTree binaryTree = new BinaryTree();
+        BinarySearchTree binaryTree = new BinarySearchTree();
         int [] nums = {7,4,2,1,3,6,5,9,8,10};
         int [] nums2 = {1,5,4,3,2,6};
         /*
@@ -21,12 +19,13 @@ public class TreeTest {
             System.out.print(item+" ");
         }
         System.out.println();
+        binaryTree.deleteBST(5);
         System.out.println("节点数:"+binaryTree.size());
         System.out.println("最小"+binaryTree.findMin());
         System.out.println("最大"+binaryTree.findMax());
         //binaryTree.levelOrder();
         //binaryTree.preOrder();
-        binaryTree.preOrderWithStack();
+        //binaryTree.preOrderWithStack();
         //binaryTree.inOrder();
         //binaryTree.postOrder();
     }
